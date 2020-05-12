@@ -342,7 +342,6 @@ public class AffiliatesDriver {
             // }
             if(classType.equals("Full Professor")){
               String address = parseFieldsFromFile(currStrArray[1]);
-              String ageTemp = parseFieldsFromFile(currStrArray[2]);
               int age = Integer.parseInt(parseFieldsFromFile(ageTemp));
               String department = parseFieldsFromFile(currStrArray[3]);
               int id = Integer.parseInt(parseFieldsFromFile(currStrArray[4]));
@@ -457,7 +456,8 @@ public class AffiliatesDriver {
         break;
       }
     }
-    
+  }
+}
 /*
 When your program is run it should display the following options:
 1) Create an affiliate record

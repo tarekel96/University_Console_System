@@ -166,7 +166,7 @@ public abstract class Faculty extends Affiliates {
     String ret = super.print();
     ret += "\nFaculty ID: " + m_facultyId;
     ret += "\nDepartment: " + m_department;
-    ret += "\nYearly Salary: $" + m_yearlySalary;
+    ret += "\nYearly Salary: " + m_yearlySalary;
     ret += "\nNumber of Papers: " + m_numberOfPapers;
     return ret;
   }
@@ -180,7 +180,7 @@ public abstract class Faculty extends Affiliates {
     LinkedList<String> stringLL = super.orderAlphabetically();
     stringLL.add("Faculty ID: " + m_facultyId);
     stringLL.add("Department: " + m_department);
-    stringLL.add("Yearly Salary: $" + m_yearlySalary);
+    stringLL.add("Yearly Salary: " + m_yearlySalary);
     stringLL.add("Number of Papers: " + m_numberOfPapers);
     Collections.sort(stringLL);
     return stringLL;
