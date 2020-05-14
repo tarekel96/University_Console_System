@@ -1,4 +1,6 @@
+/** import to use sort method */
 import java.util.Collections;
+/** import LinkedList Collection data structure */
 import java.util.LinkedList;
 
 /**
@@ -9,7 +11,7 @@ import java.util.LinkedList;
 public class FullProfessor extends Faculty {
 
   // Fields
-  /** m_yearsUntilRetirement is an int that represents a full professor's number of years until retirement */
+  /** an int that represents a full professor's number of years until retirement */
   private int m_yearsUntilRetirement;
 
   /**
@@ -28,10 +30,10 @@ public class FullProfessor extends Faculty {
     * @param phoneNumber assigned to the m_phoneNumber field of the affiliate
     * @param yearBegan assigned to the m_yearBegan field of the affiliate
     * @param facultyId assigned to the m_facultyId field of the faculty member
-    * @param deparment assigned to the m_deparment field of the faculty member
+    * @param department assigned to the m_department field of the faculty member
     * @param yearlySalary assigned to the m_yearlySalary field of the faculty member
     * @param numberOfPapers assigned to the m_numberOfPapers field of the faculty member
-    * @param m_yearsUntilRetirement assigned to the m_yearsUntilRetirement field of the full professor member
+    * @param yearsUntilRetirement assigned to the m_yearsUntilRetirement field of the full professor member
   */
   public FullProfessor(String name, int age, String address, String phoneNumber, int yearBegan, int facultyId, String department, double yearlySalary, int numberOfPapers, int yearsUntilRetirement){
     super(name, age, address, phoneNumber, yearBegan, facultyId, department, yearlySalary, numberOfPapers);
@@ -58,7 +60,7 @@ public class FullProfessor extends Faculty {
   };
   /**
     * This is an accessor method
-    * @return returns the Full Professor's yearsUntilRetirement field
+    * @return the Full Professor's yearsUntilRetirement field
   */
   public int getYearsUntilRetirement(){
     return m_yearsUntilRetirement;
@@ -74,7 +76,7 @@ public class FullProfessor extends Faculty {
 
   /**
     * toString - override the default toString Object method
-    * @return returns the contents of a Full Professor in a nicely printed format
+    * @return the contents of a Full Professor in a nicely printed format
   */
   @Override
   public String toString(){
@@ -85,7 +87,7 @@ public class FullProfessor extends Faculty {
 
   /**
     * equals - override the default equals Object method
-    * @return returns true if the fields are equal and false otherwise
+    * @return true if the fields are equal and false otherwise
   */
   @Override
   public boolean equals(Object fp){
@@ -120,20 +122,4 @@ public class FullProfessor extends Faculty {
     Collections.sort(stringLL);
     return stringLL;
   }
-
-  public static void main(String[] args){
-    // FullProfessor ap1 = new FullProfessor();
-    FullProfessor ap2 = new FullProfessor("Barus", 23, "5737 Alvarado Pl", "7606688677", 1996, 0001, "Computer Science", 100000.00, 12, 14);
-    System.out.println(ap2.printAlphabetically(ap2.orderAlphabetically()));
-    // FullProfessor ap3 = new FullProfessor("Barus", 23, "5737 Alvarado Pl", "7606688677", 1996, 0001, "Computer Science", 100000.00, 12, 14);
-    // System.out.println(ap1.toString());
-    // System.out.println(ap2.toString());
-    // System.out.println(ap1.equals(ap1));
-    // System.out.println(ap1.equals(ap2));
-    // System.out.println(ap3.equals(ap3));
-    // FullProfessor ap4 = new FullProfessor("Barus", 23, "5737 Alvarado Pl", "7606688677", 1996, 0001, "Computer Science", 100000.00, 12, 14);
-    // FullProfessor ap5 = new FullProfessor(ap4);
-    // System.out.println(ap5);
-  }
-
 }

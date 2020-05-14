@@ -1,4 +1,6 @@
+/** import LinkedList Collection data structure */
 import java.util.LinkedList;
+/** import to use sort method */
 import java.util.Collections;
 
 /**
@@ -9,13 +11,13 @@ import java.util.Collections;
 public abstract class Students extends Affiliates  {
 
   // Fields
-  /** m_studentId is an int that represents a student's id */
+  /** an int that represents a student's id */
   protected int m_studentId;
-  /** m_major is a String that represents a student's major */
+  /** a String that represents a student's major */
   protected String m_major;
-  /** m_minor is a String that represents a student's minor */
+  /** a String that represents a student's minor */
   protected String m_minor;
-  /** m_classStanding is a String that represents a student's class standing */
+  /** a String that represents a student's class standing */
   protected String m_classStanding;
 
   /**
@@ -64,33 +66,33 @@ public abstract class Students extends Affiliates  {
   // Accessors
   /**
     * This is an accessor method that is abstract.
-    * @return returns the type of Affiliate
+    * @return the type of Affiliate
   */
   public abstract String getClassType();
   /**
     * This is an accessor method
-    * @return returns the Student's id field
+    * @return the Student's id field
   */
   public int getId(){
     return m_studentId;
   }
   /**
     * This is an accessor method
-    * @return returns the Student's age field
+    * @return the Student's age field
   */
   public String getMajor(){
     return m_major;
   }
   /**
     * This is an accessor method
-    * @return returns the Student's minor field
+    * @return the Student's minor field
   */
   public String getMinor(){
     return m_minor;
   }
   /**
     * This is an accessor method
-    * @return returns the Student's class standing field
+    * @return the Student's class standing field
   */
   public String getClassStanding(){
     return m_classStanding;
@@ -183,19 +185,4 @@ public abstract class Students extends Affiliates  {
     Collections.sort(stringLL);
     return stringLL;
   }
-
-  // public static void main(String[] args){
-  // //   Students s1 = new Students();
-  // //   Students s2 = new Students("Barus", 23, "5737 Alvarado Pl", "7606688677", 1996, 2019, "Computer Science", "Mathematics", "Transfer");
-  //   //Students s3 = new Students("Barus", 23, "5737 Alvarado Pl", "7606688677", 1996, 2019, "Computer Science", "Mathematics", "Transfer");
-  // //   System.out.println(s1.toString());
-  // //   System.out.println(s2.toString());
-  // //   System.out.println(s1.equals(s1));
-  // //   System.out.println(s1.equals(s2));
-  // //System.out.println(s3.printAlphabetically(s3.orderAlphabetically()));
-  // //   Students s4 = new Students("Barus", 23, "5737 Alvarado Pl", "7606688677", 1996, 2019, "Computer Science", "Mathematics", "Transfer");
-  // //   Students s5 = new Students(s4);
-  // //   System.out.println(s5);
-  // }
-
 }

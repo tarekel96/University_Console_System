@@ -1,4 +1,6 @@
+/** import to use sort method */
 import java.util.Collections;
+/** import LinkedList Collection data structure */
 import java.util.LinkedList;
 
 /**
@@ -9,11 +11,11 @@ import java.util.LinkedList;
 public abstract class Staff extends Affiliates  {
 
   // Fields
-  /** m_staffId is an int that represents a staff member's id */
+  /** an int that represents a staff member's id */
   protected int m_staffId;
-  /** m_title is a String that represents a staff member's title */
+  /** a String that represents a staff member's title */
   protected String m_title;
-  /** m_minor is a String that represents a staff member's building */
+  /** a String that represents a staff member's building */
   protected String m_building;
 
   /**
@@ -58,26 +60,26 @@ public abstract class Staff extends Affiliates  {
   // Accessors
   /**
     * This is an accessor method that is abstract.
-    * @return returns the type of Staff
+    * @return the type of Staff
   */
   public abstract String getClassType();
   /**
     * This is an accessor method
-    * @return returns the Staff member's id field
+    * @return the Staff member's id field
   */
   public int getId(){
     return m_staffId;
   }
   /**
     * This is an accessor method
-    * @return returns the Staff member's title
+    * @return the Staff member's title
   */
   public String getTitle(){
     return m_title;
   }
   /**
     * This is an accessor method
-    * @return returns the Staff member's building
+    * @return the Staff member's building
   */
   public String getBuilding(){
     return m_building;
@@ -160,19 +162,4 @@ public abstract class Staff extends Affiliates  {
     Collections.sort(stringLL);
     return stringLL;
   }
-
-  // public static void main(String[] args){
-  // //   Staff sf1 = new Staff();
-  // //   Staff sf2 = new Staff("Barus", 23, "5737 Alvarado Pl", "7606688677", 1996, 0002, "Program Manager", "Hashingter");
-  // //   System.out.println(printAlphabetically(sf2.orderAlphabetically()));
-  // //   Staff sf3 = new Staff("Barus", 23, "5737 Alvarado Pl", "7606688677", 1996, 0002, "Program Manager", "Hashingter");
-  // //   System.out.println(sf1.toString());
-  // //   System.out.println(sf2.toString());
-  // //   System.out.println(sf1.equals(sf1));
-  // //   System.out.println(sf1.equals(sf2));
-  // //   System.out.println(sf3.equals(sf3));
-  // //   System.out.println(sf2.print());
-  // //   System.out.println(sf2.compareTo(sf2));
-  // }
-
 }

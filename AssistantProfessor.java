@@ -1,4 +1,6 @@
+/** import to use sort method */
 import java.util.Collections;
+/** import LinkedList Collection data structure */
 import java.util.LinkedList;
 
 /**
@@ -9,7 +11,7 @@ import java.util.LinkedList;
 public class AssistantProfessor extends Faculty {
 
   // Fields
-  /** m_yearsUntilTenure is an int that represents an assistant professor's number of years until tenure */
+  /** an int that represents an assistant professor's number of years until tenure */
   private int m_yearsUntilTenure;
 
   /**
@@ -28,7 +30,7 @@ public class AssistantProfessor extends Faculty {
     * @param phoneNumber assigned to the m_phoneNumber field of the affiliate
     * @param yearBegan assigned to the m_yearBegan field of the affiliate
     * @param facultyId assigned to the m_facultyId field of the faculty member
-    * @param deparment assigned to the m_deparment field of the faculty member
+    * @param department assigned to the m_department field of the faculty member
     * @param yearlySalary assigned to the m_yearlySalary field of the faculty member
     * @param numberOfPapers assigned to the m_numberOfPapers field of the faculty member
     * @param yearsUntilTenure assigned to the m_yearsUntilTenure field of the assistant professor member
@@ -111,7 +113,7 @@ public class AssistantProfessor extends Faculty {
 
   /**
     * orderAlphabetically() orders a LinkedList and sorts it alphabetically via the Collections.sort()
-    * @return returns the alphabetically sorted LinkedList
+    * @return the alphabetically sorted LinkedList
   */
   @Override
   public LinkedList<String> orderAlphabetically(){
@@ -120,20 +122,4 @@ public class AssistantProfessor extends Faculty {
     Collections.sort(stringLL);
     return stringLL;
   }
-
-   public static void main(String[] args){
-  //   AssistantProfessor ap1 = new AssistantProfessor();
-     AssistantProfessor ap2 = new AssistantProfessor("Barus", 23, "5737 Alvarado Pl", "7606688677", 1996, 0001, "Computer Science", 100000.00, 12, 8);
-     System.out.println(ap2.printAlphabetically(ap2.orderAlphabetically()));
-  //   AssistantProfessor ap3 = new AssistantProfessor("Barus", 23, "5737 Alvarado Pl", "7606688677", 1996, 0001, "Computer Science", 100000.00, 12, 8);
-  //   System.out.println(ap1.toString());
-  //   System.out.println(ap2.toString());
-  //   System.out.println(ap1.equals(ap1));
-  //   System.out.println(ap1.equals(ap2));
-  //   System.out.println(ap3.equals(ap3));
-  //   AssistantProfessor ap4 = new AssistantProfessor("Barus", 23, "5737 Alvarado Pl", "7606688677", 1996, 0001, "Computer Science", 100000.00, 12, 8);
-  //   AssistantProfessor ap5 = new AssistantProfessor(ap4);
-  //   System.out.println(ap5);
-   }
-
 }

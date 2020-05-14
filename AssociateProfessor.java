@@ -1,4 +1,6 @@
+/** import to use sort method */
 import java.util.Collections;
+/** import LinkedList Collection data structure */
 import java.util.LinkedList;
 /**
   * AssociateProfessor is a class that represents associate professors
@@ -8,7 +10,7 @@ import java.util.LinkedList;
 public class AssociateProfessor extends Faculty {
 
   // Fields
-  /** m_yearsSinceTenure is an int that represents an associate professor's number of tenure years */
+  /** an int that represents an associate professor's number of tenure years */
   private int m_yearsSinceTenure;
 
   /**
@@ -27,10 +29,10 @@ public class AssociateProfessor extends Faculty {
     * @param phoneNumber assigned to the m_phoneNumber field of the affiliate
     * @param yearBegan assigned to the m_yearBegan field of the affiliate
     * @param facultyId assigned to the m_facultyId field of the faculty member
-    * @param deparment assigned to the m_deparment field of the faculty member
+    * @param department assigned to the m_department field of the faculty member
     * @param yearlySalary assigned to the m_yearlySalary field of the faculty member
     * @param numberOfPapers assigned to the m_numberOfPapers field of the faculty member
-    * @param m_yearsSinceTenure assigned to the m_yearsSinceTenure field of the associate professor member
+    * @param yearsSinceTenure assigned to the m_yearsSinceTenure field of the associate professor member
   */
   public AssociateProfessor(String name, int age, String address, String phoneNumber, int yearBegan, int facultyId, String department, double yearlySalary, int numberOfPapers, int yearsSinceTenure){
     super(name, age, address, phoneNumber, yearBegan, facultyId, department, yearlySalary, numberOfPapers);
@@ -49,7 +51,7 @@ public class AssociateProfessor extends Faculty {
   // Accessors
   /**
     * This is an accessor method that overrides the abstract method from Faculty.
-    * @return returns the type of Faculty
+    * @return the type of Faculty
   */
   @Override
   public String getClassType(){
@@ -57,7 +59,7 @@ public class AssociateProfessor extends Faculty {
   };
   /**
     * This is an accessor method
-    * @return returns the Associate Professor's yearsSinceTenure field
+    * @return the Associate Professor's yearsSinceTenure field
   */
   public int getYearsSinceTenure(){
     return m_yearsSinceTenure;
@@ -73,7 +75,7 @@ public class AssociateProfessor extends Faculty {
 
   /**
     * toString - override the default toString Object method
-    * @return returns the contents of an Associate Professor in a nicely printed format
+    * @return the contents of an Associate Professor in a nicely printed format
   */
   @Override
   public String toString(){
@@ -84,7 +86,7 @@ public class AssociateProfessor extends Faculty {
 
   /**
     * equals - override the default equals Object method
-    * @return returns true if the fields are equal and false otherwise
+    * @return true if the fields are equal and false otherwise
   */
   @Override
   public boolean equals(Object ap){
@@ -110,7 +112,7 @@ public class AssociateProfessor extends Faculty {
 
   /**
     * orderAlphabetically() orders a LinkedList and sorts it alphabetically via the Collections.sort()
-    * @return returns the alphabetically sorted LinkedList
+    * @return the alphabetically sorted LinkedList
   */
   @Override
   public LinkedList<String> orderAlphabetically(){
@@ -119,22 +121,4 @@ public class AssociateProfessor extends Faculty {
     Collections.sort(stringLL);
     return stringLL;
   }
-
-   public static void main(String[] args){
-  //   AssociateProfessor ap1 = new AssociateProfessor();
-     AssociateProfessor ap2 = new AssociateProfessor("Barus", 23, "5737 Alvarado Pl", "7606688677", 1996, 0001, "Computer Science", 100000.00, 12, 4);
-     System.out.println(ap2.printAlphabetically(ap2.orderAlphabetically()));
-  //   AssociateProfessor ap3 = new AssociateProfessor("Barus", 23, "5737 Alvarado Pl", "7606688677", 1996, 0001, "Computer Science", 100000.00, 12, 4);
-  //   System.out.println(ap1.toString());
-  //   System.out.println(ap2.toString());
-  //   System.out.println(ap1.equals(ap1));
-  //   System.out.println(ap1.equals(ap2));
-  //   System.out.println(ap3.equals(ap3));
-  //   AssociateProfessor ap4 = new AssociateProfessor("Barus", 23, "5737 Alvarado Pl", "7606688677", 1996, 0001, "Computer Science", 100000.00, 12, 4);
-  //   AssociateProfessor ap5 = new AssociateProfessor(ap4);
-  //   System.out.println(ap5);
-  //   System.out.println(ap5.print());
-  //   System.out.println(ap2.compareTo(ap1));
-   }
-
 }

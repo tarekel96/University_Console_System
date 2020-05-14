@@ -1,6 +1,6 @@
-/** imported to use HashMap Collections data structure */
-import java.util.HashMap;
+/** import LinkedList Collection data structure */
 import java.util.LinkedList;
+/** import to use sort method */
 import java.util.Collections;
 
 /**
@@ -11,13 +11,13 @@ import java.util.Collections;
 public abstract class Faculty extends Affiliates {
 
   // Fields
-  /** m_facultyId is an int that represents a faculty's id */
+  /** represents a faculty's id */
   protected int m_facultyId;
-  /** m_department is a String that represents an faculty member's department */
+  /** represents an faculty member's department */
   protected String m_department;
-  /** m_yearlySalary is a String that represents an faculty member's yearly salary */
+  /** represents an faculty member's yearly salary */
   protected double m_yearlySalary;
-  /** m_numberOfPapers is an int that represents the number of papers a faculty member has */
+  /** represents the number of papers a faculty member has */
   protected int m_numberOfPapers;
 
   /**
@@ -39,7 +39,7 @@ public abstract class Faculty extends Affiliates {
     * @param phoneNumber assigned to the m_phoneNumber field of the affiliate
     * @param yearBegan assigned to the m_yearBegan field of the affiliate
     * @param facultyId assigned to the m_facultyId field of the faculty member
-    * @param deparment assigned to the m_deparment field of the faculty member
+    * @param department assigned to the m_deparment field of the faculty member
     * @param yearlySalary assigned to the m_yearlySalary field of the faculty member
     * @param numberOfPapers assigned to the m_numberOfPapers field of the faculty member
   */
@@ -172,8 +172,8 @@ public abstract class Faculty extends Affiliates {
   }
 
   /**
-    * orderAlphabetically() orders a LinkedList and sorts it alphabetically via the Collections.sort()
-    * @return returns the alphabetically sorted LinkedList
+    * orderAlphabetically() is a method that adds the fields with their respected labels into a LinkedList and then alphabetically sorts the LinkedList
+    * @return the alphabetically sorted LinkedList of fields with labels that is returned
   */
   @Override
   public LinkedList<String> orderAlphabetically(){
@@ -185,30 +185,4 @@ public abstract class Faculty extends Affiliates {
     Collections.sort(stringLL);
     return stringLL;
   }
-
-  // public String printAlphabetically(LinkedList<String> stringLL){
-  //   String ret = "";
-  //   for(int i = 0; i < stringLL.size(); ++i){
-  //     if(i == (stringLL.size() - 1)){
-  //       ret += stringLL.get(i) + " ";
-  //     } else {
-  //       ret += stringLL.get(i) + ", ";
-  //     }
-  //   }
-  //   return ret;
-  // }
-
-  // public static void main(String[] args){
-  //   Faculty f1 = new Faculty();
-  //   Faculty f2 = new Faculty("Barus", 23, "5737 Alvarado Pl", "7606688677", 1996, 0001, "Computer Science", 100000.00, 12);
-  //   // Faculty f3 = new Faculty("Barus", 23, "5737 Alvarado Pl", "7606688677", 1996, 0001, "Computer Science", 100000.00, 12);
-  //   // System.out.println(f1.toString());
-  //   // System.out.println(f2.toString());
-  //   // System.out.println(f1.equals(f1));
-  //   // System.out.println(f1.equals(f2));
-  //   // System.out.println(f3.equals(f3));
-  //   // System.out.println(f1.compareTo(f2));
-  //   System.out.println(f2.printAlphabetically(f2.orderAlphabetically()));
-  // }
-
 }

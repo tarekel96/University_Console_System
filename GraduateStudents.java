@@ -1,4 +1,6 @@
+/** import to use sort method */
 import java.util.Collections;
+/** import LinkedList Collection data structure */
 import java.util.LinkedList;
 
 /**
@@ -9,9 +11,9 @@ import java.util.LinkedList;
 public class GraduateStudents extends Students {
 
   // Fields
-  /** m_numberOfPapersPublished is an int that represents a graduate student's number of published papers */
+  /** an int that represents a graduate student's number of published papers */
   private int m_numberOfPapersPublished;
-  /** m_thesisAdvisor is the graduate student's thesis advisor */
+  /** a String that represents a graduate student's thesis advisor */
   private String m_thesisAdvisor;
 
   /**
@@ -30,12 +32,12 @@ public class GraduateStudents extends Students {
     * @param address assigned to the m_address field of the affiliate
     * @param phoneNumber assigned to the m_phoneNumber field of the affiliate
     * @param yearBegan assigned to the m_yearBegan field of the affiliate
-    * @param facultyId assigned to the m_facultyId field of the faculty member
-    * @param deparment assigned to the m_deparment field of the faculty member
-    * @param yearlySalary assigned to the m_yearlySalary field of the faculty member
-    * @param numberOfPapers assigned to the m_numberOfPapers field of the faculty member
-    * @param m_numberOfPapersPublished assigned to the m_numberOfPapersPublished field of the graduate student member
-    * @param n_thesisAdvisor assigned to the m_thesisAdvisor field of the graduate student member
+    * @param studentId assigned to the m_studentId field of the student member
+    * @param major assigned to the m_major field of the student member
+    * @param minor assigned to the m_minor field of the student member
+    * @param classStanding assigned to the m_classStanding field of the student member
+    * @param numberOfPapersPublished assigned to the m_numberOfPapersPublished field of the graduate student member
+    * @param thesisAdvisor assigned to the m_thesisAdvisor field of the graduate student member
   */
   public GraduateStudents(String name, int age, String address, String phoneNumber, int yearBegan, int studentId, String major, String minor, String classStanding, int numberOfPapersPublished, String thesisAdvisor){
     super(name, age, address, phoneNumber, yearBegan, studentId, major, minor, classStanding);
@@ -56,7 +58,7 @@ public class GraduateStudents extends Students {
   // Accessors
   /**
     * This is an accessor method that overrides the abstract method from Students.
-    * @return returns the type of Students
+    * @return the type of Students
   */
   @Override
   public String getClassType(){
@@ -64,14 +66,14 @@ public class GraduateStudents extends Students {
   };
   /**
     * This is an accessor method
-    * @return returns the Graduate Student's number of papers published
+    * @return the Graduate Student's number of papers published
   */
   public int getNumberOfPapersPublished(){
     return m_numberOfPapersPublished;
   }
   /**
     * This is an accessor method
-    * @return returns the Graduate Student's thesis advisor
+    * @return the Graduate Student's thesis advisor
   */
   public String getThesisAdvisor(){
     return m_thesisAdvisor;
@@ -95,7 +97,7 @@ public class GraduateStudents extends Students {
 
   /**
     * toString - override the default toString Object method
-    * @return returns the contents of a Graduate Student in a nicely printed format
+    * @return the contents of a Graduate Student in a nicely printed format
   */
   @Override
   public String toString(){
@@ -107,7 +109,7 @@ public class GraduateStudents extends Students {
 
   /**
     * equals - override the default equals Object method
-    * @return returns true if the fields are equal and false otherwise
+    * @return true if the fields are equal and false otherwise
   */
   @Override
   public boolean equals(Object gs){
@@ -134,7 +136,7 @@ public class GraduateStudents extends Students {
 
   /**
     * orderAlphabetically() orders a LinkedList and sorts it alphabetically via the Collections.sort()
-    * @return returns the alphabetically sorted LinkedList
+    * @return the alphabetically sorted LinkedList
   */
   @Override
   public LinkedList<String> orderAlphabetically(){
@@ -144,21 +146,4 @@ public class GraduateStudents extends Students {
     Collections.sort(stringLL);
     return stringLL;
   }
-
-  public static void main(String[] args){
-    // GraduateStudents gs1 = new GraduateStudents();
-    // GraduateStudents gs2 = new GraduateStudents("Barus", 23, "5737 Alvarado Pl", "7606688677", 1996, 0007, "Philosophy", "Creative Writing", "Sophomore", 8, "Dr. Oz");
-    // GraduateStudents gs3 = new GraduateStudents("Barus", 23, "5737 Alvarado Pl", "7606688677", 1996, 0007, "Philosophy", "Creative Writing", "Sophomore", 8, "Dr. Oz");
-    // System.out.println(gs1.toString());
-    // System.out.println(gs2.toString());
-    // System.out.println(gs1.equals(gs1));
-    // System.out.println(gs1.equals(gs2));
-    // System.out.println(gs3.equals(gs3));
-    GraduateStudents gs4 = new GraduateStudents("Barus", 23, "5737 Alvarado Pl", "7606688677", 1996, 0001, "Philosophy", "Creative Writing", "Sophomore", 8, "Dr. Oz");
-    System.out.println(gs4.printAlphabetically(gs4.orderAlphabetically()));
-    // GraduateStudents gs5 = new GraduateStudents(gs4);
-    // System.out.println(gs5.print());
-    // System.out.println(gs5.compareTo(gs5));
-  }
-
 }

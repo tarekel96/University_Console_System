@@ -1,4 +1,6 @@
+/** import to use sort method */
 import java.util.Collections;
+/** import LinkedList Collection data structure */
 import java.util.LinkedList;
 
 /**
@@ -9,7 +11,7 @@ import java.util.LinkedList;
 public class PartTimeStaff extends Staff  {
 
   // Fields
-  /** m_hourlySalary is a double that represents the part time staff member's yearly salary */
+  /** is a double that represents the part time staff member's yearly salary */
   private double m_hourlySalary;
 
   /**
@@ -49,7 +51,7 @@ public class PartTimeStaff extends Staff  {
   // Accessors
   /**
     * This is an accessor method that overrides the abstract method from Staff.
-    * @return returns the type of Staff member
+    * @return the type of Staff member
   */
   @Override
   public String getClassType(){
@@ -57,7 +59,7 @@ public class PartTimeStaff extends Staff  {
   };
   /**
     * This is an accessor method
-    * @return returns the PartTimeStaff member's hourlySalary field
+    * @return the PartTimeStaff member's hourlySalary field
   */
   public double getHourlySalary(){
     return m_hourlySalary;
@@ -74,7 +76,7 @@ public class PartTimeStaff extends Staff  {
 
   /**
     * toString - override the default toString Object method
-    * @return returns the contents of a PartTimeStaff member in a nicely printed format
+    * @return the contents of a PartTimeStaff member in a nicely printed format
   */
   @Override
   public String toString(){
@@ -85,7 +87,7 @@ public class PartTimeStaff extends Staff  {
 
   /**
     * equals - override the default equals Object method
-    * @return returns true if the fields are equal and false otherwise
+    * @return true if the fields are equal and false otherwise
   */
   @Override
   public boolean equals(Object fts){
@@ -111,7 +113,7 @@ public class PartTimeStaff extends Staff  {
 
   /**
     * orderAlphabetically() orders a LinkedList and sorts it alphabetically via the Collections.sort()
-    * @return returns the alphabetically sorted LinkedList
+    * @return the alphabetically sorted LinkedList
   */
   @Override
   public LinkedList<String> orderAlphabetically(){
@@ -120,21 +122,4 @@ public class PartTimeStaff extends Staff  {
     Collections.sort(stringLL);
     return stringLL;
   }
-
-  public static void main(String[] args){
-    PartTimeStaff fts1 = new PartTimeStaff();
-    PartTimeStaff fts2 = new PartTimeStaff("Barus", 23, "5737 Alvarado Pl", "7606688677", 1996, 0002, "Program Manager", "Hashingter", 30.20);
-    System.out.println(fts2.printAlphabetically(fts2.orderAlphabetically()));
-    // PartTimeStaff fts = new PartTimeStaff("Barus", 23, "5737 Alvarado Pl", "7606688677", 1996, 0002, "Program Manager", "Hashingter", 30.20);
-    // System.out.println(fts1.toString());
-    // System.out.println(fts2.toString());
-    // System.out.println(fts1.equals(fts1));
-    // System.out.println(fts1.equals(fts2));
-    // System.out.println(fts.equals(fts));
-    // PartTimeStaff fts4 = new PartTimeStaff("Barus", 23, "5737 Alvarado Pl", "7606688677", 1996, 0002, "Program Manager", "Hashingter", 30.20);
-    // PartTimeStaff fts5 = new PartTimeStaff(fts4);
-    // System.out.println(fts5);
-    // System.out.println(fts5.equals(fts5));
-  }
-
 }
